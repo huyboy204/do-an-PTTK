@@ -21,7 +21,9 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         Phong_Table.getTableHeader().setFont(new Font("UTM Avo", Font.BOLD, 12));
-        Phong_Table.setRowHeight(25);
+        KH_Table.getTableHeader().setFont(new Font("UTM Avo", Font.BOLD, 12));
+        NV_Table.getTableHeader().setFont(new Font("UTM Avo", Font.BOLD, 12));
+        LSDP_Table.getTableHeader().setFont(new Font("UTM Avo", Font.BOLD, 12));
     }
 
     /**
@@ -34,18 +36,18 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        btnExit = new javax.swing.JLabel();
         btnINFO = new javax.swing.JLabel();
         btnLSDP = new javax.swing.JLabel();
         btnQLP = new javax.swing.JLabel();
         btnQLKH = new javax.swing.JLabel();
         btnQLNV = new javax.swing.JLabel();
-        header = new javax.swing.JLabel();
         LogoLable = new javax.swing.JLabel();
         btnDX = new javax.swing.JLabel();
         BackGr = new javax.swing.JLabel();
+        header = new javax.swing.JLabel();
         TabPanel = new javax.swing.JTabbedPane();
         Main_Panel = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
         Info_Panel = new javax.swing.JPanel();
         SDT_Text = new javax.swing.JLabel();
         SDT_Backgr = new javax.swing.JLabel();
@@ -62,14 +64,14 @@ public class MainFrame extends javax.swing.JFrame {
         ID_TextField = new javax.swing.JTextField();
         BookID_TextField = new javax.swing.JTextField();
         CustomerID_TextField = new javax.swing.JTextField();
-        btnFind = new javax.swing.JLabel();
-        btnBook = new javax.swing.JLabel();
-        btnAdd = new javax.swing.JLabel();
-        btnUpdate = new javax.swing.JLabel();
-        btnCheckIn = new javax.swing.JLabel();
-        btnDelete = new javax.swing.JLabel();
-        btnCheckOut = new javax.swing.JLabel();
-        btnClear = new javax.swing.JLabel();
+        btnFind_P = new javax.swing.JLabel();
+        btnBook_P = new javax.swing.JLabel();
+        btnAdd_P = new javax.swing.JLabel();
+        btnUpdate_P = new javax.swing.JLabel();
+        btnCheckIn_P = new javax.swing.JLabel();
+        btnDelete_P = new javax.swing.JLabel();
+        btnCheckOut_P = new javax.swing.JLabel();
+        btnClear_P = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -78,35 +80,63 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         Phong_Table = new javax.swing.JTable();
         KH_Panel = new javax.swing.JPanel();
+        btnClear_KH = new javax.swing.JLabel();
+        btnFind_KH = new javax.swing.JLabel();
+        btnAdd_KH = new javax.swing.JLabel();
+        btnUpdate_KH = new javax.swing.JLabel();
+        btnDelete_KH = new javax.swing.JLabel();
+        DOBirth_KH_Textfield = new javax.swing.JTextField();
+        CCCD_KH_TextField = new javax.swing.JTextField();
+        Phone_KH_TextField = new javax.swing.JTextField();
+        Name_KH_TextField = new javax.swing.JTextField();
+        CusID_TextField = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        KH_Table = new javax.swing.JTable();
         NV_Panel = new javax.swing.JPanel();
+        btnClear_NV = new javax.swing.JLabel();
+        btnFind_NV = new javax.swing.JLabel();
+        btnAdd_NV = new javax.swing.JLabel();
+        btnUpdate_NV = new javax.swing.JLabel();
+        btnDelete_NV = new javax.swing.JLabel();
+        DePart_NV_TextField = new javax.swing.JComboBox<>();
+        DOBirth_NV_TextField = new javax.swing.JTextField();
+        Phone_NV_TextField = new javax.swing.JTextField();
+        Adr_NV_TextField = new javax.swing.JTextField();
+        Gender_NV_TextField = new javax.swing.JTextField();
+        Name_NV_TextField = new javax.swing.JTextField();
+        StaffID_TextField = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        NV_Table = new javax.swing.JTable();
         LSDP_Panel = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        LSDP_Table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hotel Manager");
         setBackground(new java.awt.Color(250, 249, 248));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(1215, 940));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         mainPanel.setOpaque(false);
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/btnExit.png"))); // NOI18N
-        btnExit.setText("jLabel2");
-        btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnExitMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnExitMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnExitMouseExited(evt);
-            }
-        });
-        mainPanel.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 0, 30, 30));
 
         btnINFO.setFont(new java.awt.Font("UTM Avo", 0, 14)); // NOI18N
         btnINFO.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -122,7 +152,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnINFOMouseExited(evt);
             }
         });
-        mainPanel.add(btnINFO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 260, 70));
+        mainPanel.add(btnINFO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 260, 70));
 
         btnLSDP.setFont(new java.awt.Font("UTM Avo", 0, 14)); // NOI18N
         btnLSDP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -138,7 +168,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnLSDPMouseExited(evt);
             }
         });
-        mainPanel.add(btnLSDP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 260, 70));
+        mainPanel.add(btnLSDP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 260, 70));
 
         btnQLP.setFont(new java.awt.Font("UTM Avo", 0, 14)); // NOI18N
         btnQLP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -154,7 +184,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnQLPMouseExited(evt);
             }
         });
-        mainPanel.add(btnQLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 260, 70));
+        mainPanel.add(btnQLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 260, 70));
 
         btnQLKH.setFont(new java.awt.Font("UTM Avo", 0, 14)); // NOI18N
         btnQLKH.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -170,7 +200,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnQLKHMouseExited(evt);
             }
         });
-        mainPanel.add(btnQLKH, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 260, 70));
+        mainPanel.add(btnQLKH, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 260, 70));
 
         btnQLNV.setFont(new java.awt.Font("UTM Avo", 0, 14)); // NOI18N
         btnQLNV.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -186,14 +216,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnQLNVMouseExited(evt);
             }
         });
-        mainPanel.add(btnQLNV, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 260, 70));
-
-        header.setBackground(new java.awt.Color(250, 249, 248));
-        header.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
-        header.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        header.setText("    Màn hình chính");
-        header.setOpaque(true);
-        mainPanel.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 30));
+        mainPanel.add(btnQLNV, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 260, 70));
 
         LogoLable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/logoMainForm.png"))); // NOI18N
         LogoLable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -201,7 +224,7 @@ public class MainFrame extends javax.swing.JFrame {
                 LogoLableMouseClicked(evt);
             }
         });
-        mainPanel.add(LogoLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 260, 190));
+        mainPanel.add(LogoLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 190));
 
         btnDX.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
         btnDX.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -217,16 +240,25 @@ public class MainFrame extends javax.swing.JFrame {
                 btnDXMouseExited(evt);
             }
         });
-        mainPanel.add(btnDX, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 840, -1, -1));
+        mainPanel.add(btnDX, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 830, -1, -1));
 
         BackGr.setBackground(new java.awt.Color(250, 249, 248));
         BackGr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/Background1.png"))); // NOI18N
-        mainPanel.add(BackGr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 280, 900));
+        mainPanel.add(BackGr, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 900));
+
+        header.setBackground(new java.awt.Color(250, 249, 248));
+        header.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
+        header.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        mainPanel.add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 30));
 
         Main_Panel.setBackground(new java.awt.Color(250, 249, 248));
         Main_Panel.setMinimumSize(new java.awt.Dimension(935, 872));
         Main_Panel.setPreferredSize(new java.awt.Dimension(940, 900));
         Main_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/MainTab.png"))); // NOI18N
+        Main_Panel.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 900));
+
         TabPanel.addTab("tab7", Main_Panel);
 
         Info_Panel.setBackground(new java.awt.Color(250, 249, 248));
@@ -239,10 +271,10 @@ public class MainFrame extends javax.swing.JFrame {
         SDT_Text.setText("Your Phone Number");
         SDT_Text.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         SDT_Text.setOpaque(true);
-        Info_Panel.add(SDT_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 610, 50));
+        Info_Panel.add(SDT_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 610, 50));
 
         SDT_Backgr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/SDT_Backgr.png"))); // NOI18N
-        Info_Panel.add(SDT_Backgr, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 800, 60));
+        Info_Panel.add(SDT_Backgr, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 800, 60));
 
         ID_Text.setBackground(new java.awt.Color(250, 249, 248));
         ID_Text.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
@@ -250,10 +282,10 @@ public class MainFrame extends javax.swing.JFrame {
         ID_Text.setText("Your ID");
         ID_Text.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         ID_Text.setOpaque(true);
-        Info_Panel.add(ID_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 610, 50));
+        Info_Panel.add(ID_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 610, 50));
 
         ID_Backgr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/ID_Backgr.png"))); // NOI18N
-        Info_Panel.add(ID_Backgr, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 800, 60));
+        Info_Panel.add(ID_Backgr, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 800, 60));
 
         Name_Text.setBackground(new java.awt.Color(250, 249, 248));
         Name_Text.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
@@ -261,10 +293,10 @@ public class MainFrame extends javax.swing.JFrame {
         Name_Text.setText("Your Full Name");
         Name_Text.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         Name_Text.setOpaque(true);
-        Info_Panel.add(Name_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 610, 50));
+        Info_Panel.add(Name_Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 610, 50));
 
         Name_Backgr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/Name_Backgr.png"))); // NOI18N
-        Info_Panel.add(Name_Backgr, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 800, 60));
+        Info_Panel.add(Name_Backgr, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 800, 60));
 
         btnDMK.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/btnDMK1.png"))); // NOI18N
         btnDMK.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
@@ -279,13 +311,12 @@ public class MainFrame extends javax.swing.JFrame {
                 btnDMKMouseExited(evt);
             }
         });
-        Info_Panel.add(btnDMK, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 430, 260, 70));
+        Info_Panel.add(btnDMK, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 260, 70));
 
         jLabel2.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setText("INFO");
-        jLabel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
-        Info_Panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 100, 60));
+        Info_Panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 100, 60));
 
         TabPanel.addTab("tab1", Info_Panel);
 
@@ -294,163 +325,163 @@ public class MainFrame extends javax.swing.JFrame {
         QLP_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setText("QUẢN LÝ PHÒNG");
-        QLP_Panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 260, 40));
+        QLP_Panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 260, 70));
 
         StatusComboBox.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         StatusComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Đang trống", "Đang ở", "Đã đặt", "Đang sửa" }));
         StatusComboBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        QLP_Panel.add(StatusComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 390, 40));
+        QLP_Panel.add(StatusComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 390, 40));
 
         TypeRoomComboBox.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         TypeRoomComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Economy", "Deluxe", "Royal", "President" }));
         TypeRoomComboBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        QLP_Panel.add(TypeRoomComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 390, 40));
+        QLP_Panel.add(TypeRoomComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 390, 40));
 
         ID_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         ID_TextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         ID_TextField.setText("Room ID");
         ID_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        QLP_Panel.add(ID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 390, 40));
+        QLP_Panel.add(ID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 390, 40));
 
         BookID_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         BookID_TextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         BookID_TextField.setText("Booking ID");
         BookID_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        QLP_Panel.add(BookID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 390, 40));
+        QLP_Panel.add(BookID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 390, 40));
 
         CustomerID_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         CustomerID_TextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         CustomerID_TextField.setText("Customer ID");
         CustomerID_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        QLP_Panel.add(CustomerID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 390, 40));
+        QLP_Panel.add(CustomerID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 390, 40));
 
-        btnFind.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind1.png"))); // NOI18N
-        btnFind.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        btnFind.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnFind_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind1.png"))); // NOI18N
+        btnFind_P.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnFind_P.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnFindMouseClicked(evt);
+                btnFind_PMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnFindMouseEntered(evt);
+                btnFind_PMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnFindMouseExited(evt);
+                btnFind_PMouseExited(evt);
             }
         });
-        QLP_Panel.add(btnFind, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 260, 50));
+        QLP_Panel.add(btnFind_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 260, 50));
 
-        btnBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnBook1.png"))); // NOI18N
-        btnBook.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        btnBook.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnBook_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnBook1.png"))); // NOI18N
+        btnBook_P.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnBook_P.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnBookMouseClicked(evt);
+                btnBook_PMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnBookMouseEntered(evt);
+                btnBook_PMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnBookMouseExited(evt);
+                btnBook_PMouseExited(evt);
             }
         });
-        QLP_Panel.add(btnBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 310, 120, 50));
+        QLP_Panel.add(btnBook_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 310, 120, 50));
 
-        btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd1.png"))); // NOI18N
-        btnAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnAdd_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd1.png"))); // NOI18N
+        btnAdd_P.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnAdd_P.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAddMouseClicked(evt);
+                btnAdd_PMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnAddMouseEntered(evt);
+                btnAdd_PMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnAddMouseExited(evt);
+                btnAdd_PMouseExited(evt);
             }
         });
-        QLP_Panel.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 120, 50));
+        QLP_Panel.add(btnAdd_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, 120, 50));
 
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd1.png"))); // NOI18N
-        btnUpdate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        btnUpdate.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnUpdate_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd1.png"))); // NOI18N
+        btnUpdate_P.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnUpdate_P.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnUpdateMouseClicked(evt);
+                btnUpdate_PMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnUpdateMouseEntered(evt);
+                btnUpdate_PMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnUpdateMouseExited(evt);
+                btnUpdate_PMouseExited(evt);
             }
         });
-        QLP_Panel.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 190, 120, 50));
+        QLP_Panel.add(btnUpdate_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 190, 120, 50));
 
-        btnCheckIn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkIN1.png"))); // NOI18N
-        btnCheckIn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        btnCheckIn.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCheckIn_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkIN1.png"))); // NOI18N
+        btnCheckIn_P.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnCheckIn_P.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnCheckInMouseClicked(evt);
+                btnCheckIn_PMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnCheckInMouseEntered(evt);
+                btnCheckIn_PMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnCheckInMouseExited(evt);
+                btnCheckIn_PMouseExited(evt);
             }
         });
-        QLP_Panel.add(btnCheckIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, 120, 50));
+        QLP_Panel.add(btnCheckIn_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 250, 120, 50));
 
-        btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel1.png"))); // NOI18N
-        btnDelete.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        btnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnDelete_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel1.png"))); // NOI18N
+        btnDelete_P.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnDelete_P.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnDeleteMouseClicked(evt);
+                btnDelete_PMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnDeleteMouseEntered(evt);
+                btnDelete_PMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnDeleteMouseExited(evt);
+                btnDelete_PMouseExited(evt);
             }
         });
-        QLP_Panel.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 250, 120, 50));
+        QLP_Panel.add(btnDelete_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 250, 120, 50));
 
-        btnCheckOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkO1.png"))); // NOI18N
-        btnCheckOut.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        btnCheckOut.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCheckOut_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkO1.png"))); // NOI18N
+        btnCheckOut_P.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnCheckOut_P.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnCheckOutMouseClicked(evt);
+                btnCheckOut_PMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnCheckOutMouseEntered(evt);
+                btnCheckOut_PMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnCheckOutMouseExited(evt);
+                btnCheckOut_PMouseExited(evt);
             }
         });
-        QLP_Panel.add(btnCheckOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 310, 120, 50));
+        QLP_Panel.add(btnCheckOut_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, 120, 50));
 
-        btnClear.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
-        btnClear.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnClear.setText("Clear");
-        btnClear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        QLP_Panel.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, 260, 50));
+        btnClear_P.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
+        btnClear_P.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnClear_P.setText("Clear");
+        btnClear_P.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        QLP_Panel.add(btnClear_P, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 260, 50));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/CusID_Bgr.png"))); // NOI18N
-        QLP_Panel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 540, 50));
+        QLP_Panel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 540, 50));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/BookID_Bgr.png"))); // NOI18N
-        QLP_Panel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 540, 50));
+        QLP_Panel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 540, 50));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/Status_Bgr.png"))); // NOI18N
-        QLP_Panel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 540, 50));
+        QLP_Panel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 540, 50));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/TypeRoom_Bgr.png"))); // NOI18N
-        QLP_Panel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, 540, 50));
+        QLP_Panel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 540, 50));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/ID_Bgr.png"))); // NOI18N
-        QLP_Panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 540, 50));
+        QLP_Panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 540, 50));
 
         Phong_Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -476,12 +507,13 @@ public class MainFrame extends javax.swing.JFrame {
         Phong_Table.setOpaque(false);
         Phong_Table.setRowHeight(25);
         Phong_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        Phong_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Phong_Table.setShowVerticalLines(false);
         Phong_Table.getTableHeader().setResizingAllowed(false);
         Phong_Table.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(Phong_Table);
 
-        QLP_Panel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 860, 490));
+        QLP_Panel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 870, 510));
 
         TabPanel.addTab("tab2", QLP_Panel);
 
@@ -489,23 +521,374 @@ public class MainFrame extends javax.swing.JFrame {
         KH_Panel.setPreferredSize(new java.awt.Dimension(940, 900));
         KH_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnClear_KH.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
+        btnClear_KH.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnClear_KH.setText("Clear");
+        btnClear_KH.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        KH_Panel.add(btnClear_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 190, 120, 50));
+
+        btnFind_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind1.png"))); // NOI18N
+        btnFind_KH.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnFind_KH.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnFind_KHMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnFind_KHMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnFind_KHMouseExited(evt);
+            }
+        });
+        KH_Panel.add(btnFind_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 260, 50));
+
+        btnAdd_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd1.png"))); // NOI18N
+        btnAdd_KH.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnAdd_KH.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAdd_KHMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAdd_KHMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAdd_KHMouseExited(evt);
+            }
+        });
+        KH_Panel.add(btnAdd_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 120, 50));
+
+        btnUpdate_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd1.png"))); // NOI18N
+        btnUpdate_KH.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnUpdate_KH.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnUpdate_KHMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnUpdate_KHMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnUpdate_KHMouseExited(evt);
+            }
+        });
+        KH_Panel.add(btnUpdate_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 120, 50));
+
+        btnDelete_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel1.png"))); // NOI18N
+        btnDelete_KH.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnDelete_KH.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDelete_KHMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDelete_KHMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDelete_KHMouseExited(evt);
+            }
+        });
+        KH_Panel.add(btnDelete_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, 120, 50));
+
+        DOBirth_KH_Textfield.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        DOBirth_KH_Textfield.setText("Date Of Birth");
+        DOBirth_KH_Textfield.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        KH_Panel.add(DOBirth_KH_Textfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 380, 40));
+
+        CCCD_KH_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        CCCD_KH_TextField.setText("CCCD");
+        CCCD_KH_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        KH_Panel.add(CCCD_KH_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 380, 40));
+
+        Phone_KH_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        Phone_KH_TextField.setText("Phone Number");
+        Phone_KH_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        KH_Panel.add(Phone_KH_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 380, 40));
+
+        Name_KH_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        Name_KH_TextField.setText("Full Name");
+        Name_KH_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        KH_Panel.add(Name_KH_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 380, 40));
+
+        CusID_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        CusID_TextField.setText("Customer ID");
+        CusID_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        KH_Panel.add(CusID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 380, 40));
+
         jLabel8.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
         jLabel8.setText("QUẢN LÝ KHÁCH HÀNG");
         KH_Panel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 330, 70));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/CusID_Bgr.png"))); // NOI18N
+        KH_Panel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 540, 50));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/DateOfBirth_Bgr.png"))); // NOI18N
+        KH_Panel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 540, 50));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/Name_Bgr.png"))); // NOI18N
+        KH_Panel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 540, 50));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/Phone_Bgr.png"))); // NOI18N
+        KH_Panel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 540, 50));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/CCCD_Bgr.png"))); // NOI18N
+        KH_Panel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 540, 50));
+
+        KH_Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Customer ID", "Full Name", "CCCD", "Phone Number", "Date Of Birth"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        KH_Table.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        KH_Table.setRowHeight(25);
+        KH_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        KH_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        KH_Table.setShowVerticalLines(false);
+        KH_Table.getTableHeader().setResizingAllowed(false);
+        KH_Table.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(KH_Table);
+
+        KH_Panel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 880, 510));
 
         TabPanel.addTab("tab4", KH_Panel);
 
         NV_Panel.setBackground(new java.awt.Color(250, 249, 248));
         NV_Panel.setPreferredSize(new java.awt.Dimension(940, 900));
         NV_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnClear_NV.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
+        btnClear_NV.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnClear_NV.setText("Clear");
+        btnClear_NV.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        NV_Panel.add(btnClear_NV, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 190, 120, 50));
+
+        btnFind_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind1.png"))); // NOI18N
+        btnFind_NV.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnFind_NV.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnFind_NVMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnFind_NVMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnFind_NVMouseExited(evt);
+            }
+        });
+        NV_Panel.add(btnFind_NV, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, 260, 50));
+
+        btnAdd_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd1.png"))); // NOI18N
+        btnAdd_NV.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnAdd_NV.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAdd_NVMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAdd_NVMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAdd_NVMouseExited(evt);
+            }
+        });
+        NV_Panel.add(btnAdd_NV, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 120, 50));
+
+        btnUpdate_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd1.png"))); // NOI18N
+        btnUpdate_NV.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnUpdate_NV.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnUpdate_NVMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnUpdate_NVMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnUpdate_NVMouseExited(evt);
+            }
+        });
+        NV_Panel.add(btnUpdate_NV, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 130, 120, 50));
+
+        btnDelete_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel1.png"))); // NOI18N
+        btnDelete_NV.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        btnDelete_NV.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDelete_NVMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnDelete_NVMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnDelete_NVMouseExited(evt);
+            }
+        });
+        NV_Panel.add(btnDelete_NV, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 120, 50));
+
+        DePart_NV_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        DePart_NV_TextField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vệ sinh", "Bảo vệ", "Buồng phòng", "Tiếp tân" }));
+        DePart_NV_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        NV_Panel.add(DePart_NV_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 390, 40));
+
+        DOBirth_NV_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        DOBirth_NV_TextField.setText("Date Of Birth");
+        DOBirth_NV_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        NV_Panel.add(DOBirth_NV_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, 390, 40));
+
+        Phone_NV_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        Phone_NV_TextField.setText("Phone Number");
+        Phone_NV_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        NV_Panel.add(Phone_NV_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 390, 40));
+
+        Adr_NV_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        Adr_NV_TextField.setText("Address");
+        Adr_NV_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        NV_Panel.add(Adr_NV_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, 390, 40));
+
+        Gender_NV_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        Gender_NV_TextField.setText("Gender");
+        Gender_NV_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        NV_Panel.add(Gender_NV_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 390, 40));
+
+        Name_NV_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        Name_NV_TextField.setText("Full Name");
+        Name_NV_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        NV_Panel.add(Name_NV_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 390, 40));
+
+        StaffID_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        StaffID_TextField.setText("Staff ID");
+        StaffID_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        NV_Panel.add(StaffID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 390, 40));
+
+        jLabel14.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
+        jLabel14.setText("QUẢN LÝ NHÂN VIÊN");
+        NV_Panel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 380, 70));
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLNV_pic/DePart_Bgr.png"))); // NOI18N
+        NV_Panel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 540, 50));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLNV_pic/StaffID_Bgr.png"))); // NOI18N
+        NV_Panel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 540, 50));
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/Name_Bgr.png"))); // NOI18N
+        NV_Panel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 540, 50));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLNV_pic/Gender_Bgr.png"))); // NOI18N
+        NV_Panel.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 540, 50));
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLNV_pic/Adr_Bgr.png"))); // NOI18N
+        NV_Panel.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 540, 50));
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/Phone_Bgr.png"))); // NOI18N
+        NV_Panel.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 540, 50));
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/DateOfBirth_Bgr.png"))); // NOI18N
+        NV_Panel.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 540, 50));
+
+        NV_Table.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        NV_Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Staff ID", "Full Name", "Gender", "Address", "Phone Number", "Date Of Birth", "Department"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        NV_Table.setFocusable(false);
+        NV_Table.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        NV_Table.setRowHeight(25);
+        NV_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        NV_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        NV_Table.setShowVerticalLines(false);
+        NV_Table.getTableHeader().setResizingAllowed(false);
+        NV_Table.getTableHeader().setReorderingAllowed(false);
+        jScrollPane3.setViewportView(NV_Table);
+
+        NV_Panel.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 880, 390));
+
         TabPanel.addTab("tab5", NV_Panel);
 
         LSDP_Panel.setBackground(new java.awt.Color(250, 249, 248));
         LSDP_Panel.setPreferredSize(new java.awt.Dimension(940, 900));
         LSDP_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
+        jLabel22.setText("LỊCH SỬ ĐẶT PHÒNG");
+        LSDP_Panel.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 70));
+
+        jButton1.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        jButton1.setText("Refesh");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        LSDP_Panel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 130, 30));
+
+        LSDP_Table.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        LSDP_Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Room ID", "Customer ID", "Staff ID", "Check In Date", "Check Out Date"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        LSDP_Table.setFocusable(false);
+        LSDP_Table.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        LSDP_Table.setRowHeight(25);
+        LSDP_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        LSDP_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        LSDP_Table.setShowVerticalLines(false);
+        LSDP_Table.getTableHeader().setResizingAllowed(false);
+        LSDP_Table.getTableHeader().setReorderingAllowed(false);
+        jScrollPane4.setViewportView(LSDP_Table);
+
+        LSDP_Panel.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 870, 740));
+
         TabPanel.addTab("tab6", LSDP_Panel);
 
-        mainPanel.add(TabPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 940, 910));
+        mainPanel.add(TabPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, -30, 940, 930));
 
         getContentPane().add(mainPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 910));
 
@@ -553,32 +936,22 @@ public class MainFrame extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnDXMouseClicked
 
+// Màn hình chính
+    
     private void btnQLPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQLPMouseClicked
         TabPanel.setSelectedComponent(QLP_Panel);
     }//GEN-LAST:event_btnQLPMouseClicked
 
     private void btnQLKHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQLKHMouseClicked
-        btnQLKH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/btnQKH2.png")));
+        TabPanel.setSelectedComponent(KH_Panel);
     }//GEN-LAST:event_btnQLKHMouseClicked
 
     private void btnQLNVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQLNVMouseClicked
-        btnQLNV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/btnQNV2.png")));
+        TabPanel.setSelectedComponent(NV_Panel);
     }//GEN-LAST:event_btnQLNVMouseClicked
 
-    private void btnExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseEntered
-        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/btnExit2.png")));
-    }//GEN-LAST:event_btnExitMouseEntered
-
-    private void btnExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseExited
-        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/btnExit.png")));
-    }//GEN-LAST:event_btnExitMouseExited
-
-    private void btnExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_btnExitMouseClicked
-
     private void btnLSDPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLSDPMouseClicked
-        // TODO add your handling code here:
+        TabPanel.setSelectedComponent(LSDP_Panel);
     }//GEN-LAST:event_btnLSDPMouseClicked
 
     private void btnLSDPMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLSDPMouseEntered
@@ -617,93 +990,195 @@ public class MainFrame extends javax.swing.JFrame {
         });
     }//GEN-LAST:event_btnDMKMouseClicked
 
-    private void btnFindMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFindMouseEntered
-        btnFind.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind2.png")));
-    }//GEN-LAST:event_btnFindMouseEntered
+//Quản lý phòng
 
-    private void btnFindMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFindMouseExited
-        btnFind.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind1.png")));
-    }//GEN-LAST:event_btnFindMouseExited
+    private void btnFind_PMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFind_PMouseEntered
+        btnFind_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind2.png")));
+    }//GEN-LAST:event_btnFind_PMouseEntered
 
-    private void btnFindMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFindMouseClicked
+    private void btnFind_PMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFind_PMouseExited
+        btnFind_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind1.png")));
+    }//GEN-LAST:event_btnFind_PMouseExited
+
+    private void btnFind_PMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFind_PMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnFindMouseClicked
+    }//GEN-LAST:event_btnFind_PMouseClicked
 
-    private void btnAddMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseEntered
-       btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd2.png")));
-    }//GEN-LAST:event_btnAddMouseEntered
+    private void btnAdd_PMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdd_PMouseEntered
+       btnAdd_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd2.png")));
+    }//GEN-LAST:event_btnAdd_PMouseEntered
 
-    private void btnAddMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseExited
-       btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd1.png")));
-    }//GEN-LAST:event_btnAddMouseExited
+    private void btnAdd_PMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdd_PMouseExited
+       btnAdd_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd1.png")));
+    }//GEN-LAST:event_btnAdd_PMouseExited
 
-    private void btnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseClicked
+    private void btnAdd_PMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdd_PMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddMouseClicked
+    }//GEN-LAST:event_btnAdd_PMouseClicked
 
-    private void btnUpdateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdateMouseEntered
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd2.png")));
-    }//GEN-LAST:event_btnUpdateMouseEntered
+    private void btnUpdate_PMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdate_PMouseEntered
+        btnUpdate_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd2.png")));
+    }//GEN-LAST:event_btnUpdate_PMouseEntered
 
-    private void btnUpdateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdateMouseExited
-        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd1.png")));
-    }//GEN-LAST:event_btnUpdateMouseExited
+    private void btnUpdate_PMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdate_PMouseExited
+        btnUpdate_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd1.png")));
+    }//GEN-LAST:event_btnUpdate_PMouseExited
 
-    private void btnUpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdateMouseClicked
+    private void btnUpdate_PMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdate_PMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnUpdateMouseClicked
+    }//GEN-LAST:event_btnUpdate_PMouseClicked
 
-    private void btnCheckInMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckInMouseEntered
-        btnCheckIn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkIN2.png")));
-    }//GEN-LAST:event_btnCheckInMouseEntered
+    private void btnCheckIn_PMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckIn_PMouseEntered
+        btnCheckIn_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkIN2.png")));
+    }//GEN-LAST:event_btnCheckIn_PMouseEntered
 
-    private void btnCheckInMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckInMouseExited
-        btnCheckIn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkIN1.png")));
-    }//GEN-LAST:event_btnCheckInMouseExited
+    private void btnCheckIn_PMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckIn_PMouseExited
+        btnCheckIn_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkIN1.png")));
+    }//GEN-LAST:event_btnCheckIn_PMouseExited
 
-    private void btnCheckInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckInMouseClicked
+    private void btnCheckIn_PMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckIn_PMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCheckInMouseClicked
+    }//GEN-LAST:event_btnCheckIn_PMouseClicked
 
-    private void btnCheckOutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckOutMouseEntered
-        btnCheckOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkO2.png")));
-    }//GEN-LAST:event_btnCheckOutMouseEntered
+    private void btnCheckOut_PMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckOut_PMouseEntered
+        btnCheckOut_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkO2.png")));
+    }//GEN-LAST:event_btnCheckOut_PMouseEntered
 
-    private void btnCheckOutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckOutMouseExited
-       btnCheckOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkO1.png")));
-    }//GEN-LAST:event_btnCheckOutMouseExited
+    private void btnCheckOut_PMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckOut_PMouseExited
+       btnCheckOut_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnCkO1.png")));
+    }//GEN-LAST:event_btnCheckOut_PMouseExited
 
-    private void btnDeleteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteMouseEntered
-       btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel2.png")));
-    }//GEN-LAST:event_btnDeleteMouseEntered
+    private void btnDelete_PMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDelete_PMouseEntered
+       btnDelete_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel2.png")));
+    }//GEN-LAST:event_btnDelete_PMouseEntered
 
-    private void btnDeleteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteMouseExited
-        btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel1.png")));
-    }//GEN-LAST:event_btnDeleteMouseExited
+    private void btnDelete_PMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDelete_PMouseExited
+        btnDelete_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel1.png")));
+    }//GEN-LAST:event_btnDelete_PMouseExited
 
-    private void btnDeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteMouseClicked
+    private void btnDelete_PMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDelete_PMouseClicked
          // TODO add your handling code here:
-    }//GEN-LAST:event_btnDeleteMouseClicked
+    }//GEN-LAST:event_btnDelete_PMouseClicked
 
-    private void btnBookMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBookMouseEntered
-       btnBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnBook2.png")));
-    }//GEN-LAST:event_btnBookMouseEntered
+    private void btnBook_PMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBook_PMouseEntered
+       btnBook_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnBook2.png")));
+    }//GEN-LAST:event_btnBook_PMouseEntered
 
-    private void btnBookMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBookMouseExited
-        btnBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnBook1.png")));
-    }//GEN-LAST:event_btnBookMouseExited
+    private void btnBook_PMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBook_PMouseExited
+        btnBook_P.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnBook1.png")));
+    }//GEN-LAST:event_btnBook_PMouseExited
 
-    private void btnBookMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBookMouseClicked
+    private void btnBook_PMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBook_PMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnBookMouseClicked
+    }//GEN-LAST:event_btnBook_PMouseClicked
 
-    private void btnCheckOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckOutMouseClicked
+    private void btnCheckOut_PMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCheckOut_PMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnCheckOutMouseClicked
+    }//GEN-LAST:event_btnCheckOut_PMouseClicked
 
     private void LogoLableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoLableMouseClicked
         TabPanel.setSelectedComponent(Main_Panel);
     }//GEN-LAST:event_LogoLableMouseClicked
+
+//Quản lý khách hàng
+    
+    private void btnFind_KHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFind_KHMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnFind_KHMouseClicked
+
+    private void btnFind_KHMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFind_KHMouseEntered
+        btnFind_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind2.png")));
+    }//GEN-LAST:event_btnFind_KHMouseEntered
+
+    private void btnFind_KHMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFind_KHMouseExited
+        btnFind_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind1.png")));
+    }//GEN-LAST:event_btnFind_KHMouseExited
+
+    private void btnAdd_KHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdd_KHMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAdd_KHMouseClicked
+
+    private void btnAdd_KHMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdd_KHMouseEntered
+        btnAdd_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd2.png")));
+    }//GEN-LAST:event_btnAdd_KHMouseEntered
+
+    private void btnAdd_KHMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdd_KHMouseExited
+        btnAdd_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd1.png")));
+    }//GEN-LAST:event_btnAdd_KHMouseExited
+
+    private void btnUpdate_KHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdate_KHMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdate_KHMouseClicked
+
+    private void btnUpdate_KHMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdate_KHMouseEntered
+        btnUpdate_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd2.png")));
+    }//GEN-LAST:event_btnUpdate_KHMouseEntered
+
+    private void btnUpdate_KHMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdate_KHMouseExited
+        btnUpdate_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd1.png")));
+    }//GEN-LAST:event_btnUpdate_KHMouseExited
+
+    private void btnDelete_KHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDelete_KHMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDelete_KHMouseClicked
+
+    private void btnDelete_KHMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDelete_KHMouseEntered
+        btnDelete_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel2.png")));
+    }//GEN-LAST:event_btnDelete_KHMouseEntered
+
+    private void btnDelete_KHMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDelete_KHMouseExited
+        btnDelete_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel1.png")));
+    }//GEN-LAST:event_btnDelete_KHMouseExited
+
+// Quản lý nhân viên    
+    
+    private void btnFind_NVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFind_NVMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnFind_NVMouseClicked
+
+    private void btnFind_NVMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFind_NVMouseEntered
+        btnFind_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind2.png")));
+    }//GEN-LAST:event_btnFind_NVMouseEntered
+
+    private void btnFind_NVMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFind_NVMouseExited
+        btnFind_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind1.png")));
+    }//GEN-LAST:event_btnFind_NVMouseExited
+
+    private void btnAdd_NVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdd_NVMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAdd_NVMouseClicked
+
+    private void btnAdd_NVMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdd_NVMouseEntered
+        btnAdd_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd2.png")));
+    }//GEN-LAST:event_btnAdd_NVMouseEntered
+
+    private void btnAdd_NVMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdd_NVMouseExited
+        btnAdd_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd1.png")));
+    }//GEN-LAST:event_btnAdd_NVMouseExited
+
+    private void btnUpdate_NVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdate_NVMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdate_NVMouseClicked
+
+    private void btnUpdate_NVMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdate_NVMouseEntered
+        btnUpdate_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd2.png")));
+    }//GEN-LAST:event_btnUpdate_NVMouseEntered
+
+    private void btnUpdate_NVMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUpdate_NVMouseExited
+        btnUpdate_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd1.png")));
+    }//GEN-LAST:event_btnUpdate_NVMouseExited
+
+    private void btnDelete_NVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDelete_NVMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDelete_NVMouseClicked
+
+    private void btnDelete_NVMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDelete_NVMouseEntered
+        btnDelete_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel2.png")));
+    }//GEN-LAST:event_btnDelete_NVMouseEntered
+
+    private void btnDelete_NVMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDelete_NVMouseExited
+        btnDelete_NV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel1.png")));
+    }//GEN-LAST:event_btnDelete_NVMouseExited
 
     /**
      * @param args the command line arguments
@@ -741,53 +1216,96 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Adr_NV_TextField;
     private javax.swing.JLabel BackGr;
     private javax.swing.JTextField BookID_TextField;
+    private javax.swing.JTextField CCCD_KH_TextField;
+    private javax.swing.JTextField CusID_TextField;
     private javax.swing.JTextField CustomerID_TextField;
+    private javax.swing.JTextField DOBirth_KH_Textfield;
+    private javax.swing.JTextField DOBirth_NV_TextField;
+    private javax.swing.JComboBox<String> DePart_NV_TextField;
+    private javax.swing.JTextField Gender_NV_TextField;
     private javax.swing.JLabel ID_Backgr;
     private javax.swing.JLabel ID_Text;
     private javax.swing.JTextField ID_TextField;
     private javax.swing.JPanel Info_Panel;
     private javax.swing.JPanel KH_Panel;
+    private javax.swing.JTable KH_Table;
     private javax.swing.JPanel LSDP_Panel;
+    private javax.swing.JTable LSDP_Table;
     private javax.swing.JLabel LogoLable;
     private javax.swing.JPanel Main_Panel;
     private javax.swing.JPanel NV_Panel;
+    private javax.swing.JTable NV_Table;
     private javax.swing.JLabel Name_Backgr;
+    private javax.swing.JTextField Name_KH_TextField;
+    private javax.swing.JTextField Name_NV_TextField;
     private javax.swing.JLabel Name_Text;
+    private javax.swing.JTextField Phone_KH_TextField;
+    private javax.swing.JTextField Phone_NV_TextField;
     private javax.swing.JTable Phong_Table;
     private javax.swing.JPanel QLP_Panel;
     private javax.swing.JLabel SDT_Backgr;
     private javax.swing.JLabel SDT_Text;
+    private javax.swing.JTextField StaffID_TextField;
     private javax.swing.JComboBox<String> StatusComboBox;
     private javax.swing.JTabbedPane TabPanel;
     private javax.swing.JComboBox<String> TypeRoomComboBox;
-    private javax.swing.JLabel btnAdd;
-    private javax.swing.JLabel btnBook;
-    private javax.swing.JLabel btnCheckIn;
-    private javax.swing.JLabel btnCheckOut;
-    private javax.swing.JLabel btnClear;
+    private javax.swing.JLabel btnAdd_KH;
+    private javax.swing.JLabel btnAdd_NV;
+    private javax.swing.JLabel btnAdd_P;
+    private javax.swing.JLabel btnBook_P;
+    private javax.swing.JLabel btnCheckIn_P;
+    private javax.swing.JLabel btnCheckOut_P;
+    private javax.swing.JLabel btnClear_KH;
+    private javax.swing.JLabel btnClear_NV;
+    private javax.swing.JLabel btnClear_P;
     private javax.swing.JLabel btnDMK;
     private javax.swing.JLabel btnDX;
-    private javax.swing.JLabel btnDelete;
-    private javax.swing.JLabel btnExit;
-    private javax.swing.JLabel btnFind;
+    private javax.swing.JLabel btnDelete_KH;
+    private javax.swing.JLabel btnDelete_NV;
+    private javax.swing.JLabel btnDelete_P;
+    private javax.swing.JLabel btnFind_KH;
+    private javax.swing.JLabel btnFind_NV;
+    private javax.swing.JLabel btnFind_P;
     private javax.swing.JLabel btnINFO;
     private javax.swing.JLabel btnLSDP;
     private javax.swing.JLabel btnQLKH;
     private javax.swing.JLabel btnQLNV;
     private javax.swing.JLabel btnQLP;
-    private javax.swing.JLabel btnUpdate;
+    private javax.swing.JLabel btnUpdate_KH;
+    private javax.swing.JLabel btnUpdate_NV;
+    private javax.swing.JLabel btnUpdate_P;
     private javax.swing.JLabel header;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JPanel mainPanel;
     // End of variables declaration//GEN-END:variables
 }
