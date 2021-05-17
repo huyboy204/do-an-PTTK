@@ -37,11 +37,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         mainPanel = new javax.swing.JPanel();
         btnINFO = new javax.swing.JLabel();
+        LogoLable = new javax.swing.JLabel();
         btnLSDP = new javax.swing.JLabel();
         btnQLP = new javax.swing.JLabel();
         btnQLKH = new javax.swing.JLabel();
         btnQLNV = new javax.swing.JLabel();
-        LogoLable = new javax.swing.JLabel();
         btnDX = new javax.swing.JLabel();
         BackGr = new javax.swing.JLabel();
         header = new javax.swing.JLabel();
@@ -128,7 +128,7 @@ public class MainFrame extends javax.swing.JFrame {
         LSDP_Table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Hotel Manager");
+        setTitle("HOTEL MANAGEMENT");
         setBackground(new java.awt.Color(250, 249, 248));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(1215, 940));
@@ -153,6 +153,14 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         mainPanel.add(btnINFO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 260, 70));
+
+        LogoLable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/logoMainForm.png"))); // NOI18N
+        LogoLable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LogoLableMouseClicked(evt);
+            }
+        });
+        mainPanel.add(LogoLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 190));
 
         btnLSDP.setFont(new java.awt.Font("UTM Avo", 0, 14)); // NOI18N
         btnLSDP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -217,14 +225,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         mainPanel.add(btnQLNV, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 260, 70));
-
-        LogoLable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/logoMainForm.png"))); // NOI18N
-        LogoLable.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LogoLableMouseClicked(evt);
-            }
-        });
-        mainPanel.add(LogoLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 190));
 
         btnDX.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
         btnDX.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -326,11 +326,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("QUẢN LÝ PHÒNG");
-        QLP_Panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 260, 70));
+        jLabel1.setText("ROOM MANAGEMENT");
+        QLP_Panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 300, 70));
 
         StatusComboBox.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
-        StatusComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Đang trống", "Đang ở", "Đã đặt", "Đang sửa" }));
+        StatusComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Check In", "Booked", "Repairing" }));
         StatusComboBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         QLP_Panel.add(StatusComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 390, 40));
 
@@ -513,7 +513,7 @@ public class MainFrame extends javax.swing.JFrame {
         Phong_Table.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(Phong_Table);
 
-        QLP_Panel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 870, 510));
+        QLP_Panel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 880, 510));
 
         TabPanel.addTab("tab2", QLP_Panel);
 
@@ -525,7 +525,7 @@ public class MainFrame extends javax.swing.JFrame {
         btnClear_KH.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnClear_KH.setText("Clear");
         btnClear_KH.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        KH_Panel.add(btnClear_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 190, 120, 50));
+        KH_Panel.add(btnClear_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 190, 120, 50));
 
         btnFind_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnFind1.png"))); // NOI18N
         btnFind_KH.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -540,7 +540,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnFind_KHMouseExited(evt);
             }
         });
-        KH_Panel.add(btnFind_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 260, 50));
+        KH_Panel.add(btnFind_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 70, 260, 50));
 
         btnAdd_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnAdd1.png"))); // NOI18N
         btnAdd_KH.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -555,7 +555,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnAdd_KHMouseExited(evt);
             }
         });
-        KH_Panel.add(btnAdd_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 120, 50));
+        KH_Panel.add(btnAdd_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 120, 50));
 
         btnUpdate_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnUpd1.png"))); // NOI18N
         btnUpdate_KH.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -570,7 +570,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnUpdate_KHMouseExited(evt);
             }
         });
-        KH_Panel.add(btnUpdate_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 130, 120, 50));
+        KH_Panel.add(btnUpdate_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 130, 120, 50));
 
         btnDelete_KH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnDel1.png"))); // NOI18N
         btnDelete_KH.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -585,7 +585,7 @@ public class MainFrame extends javax.swing.JFrame {
                 btnDelete_KHMouseExited(evt);
             }
         });
-        KH_Panel.add(btnDelete_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, 120, 50));
+        KH_Panel.add(btnDelete_KH, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 120, 50));
 
         DOBirth_KH_Textfield.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         DOBirth_KH_Textfield.setText("Date Of Birth");
@@ -613,7 +613,7 @@ public class MainFrame extends javax.swing.JFrame {
         KH_Panel.add(CusID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 380, 40));
 
         jLabel8.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
-        jLabel8.setText("QUẢN LÝ KHÁCH HÀNG");
+        jLabel8.setText("CUSTOMER MANAGEMENT");
         KH_Panel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 330, 70));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/CusID_Bgr.png"))); // NOI18N
@@ -741,7 +741,7 @@ public class MainFrame extends javax.swing.JFrame {
         NV_Panel.add(btnDelete_NV, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 120, 50));
 
         DePart_NV_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
-        DePart_NV_TextField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vệ sinh", "Bảo vệ", "Buồng phòng", "Tiếp tân" }));
+        DePart_NV_TextField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cleaner", "Security", "Room Attendent", "Reception" }));
         DePart_NV_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         NV_Panel.add(DePart_NV_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 390, 40));
 
@@ -776,7 +776,7 @@ public class MainFrame extends javax.swing.JFrame {
         NV_Panel.add(StaffID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 390, 40));
 
         jLabel14.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
-        jLabel14.setText("QUẢN LÝ NHÂN VIÊN");
+        jLabel14.setText("EMPLOYEE MANAGEMENT");
         NV_Panel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 380, 70));
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLNV_pic/DePart_Bgr.png"))); // NOI18N
@@ -846,7 +846,7 @@ public class MainFrame extends javax.swing.JFrame {
         LSDP_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel22.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
-        jLabel22.setText("LỊCH SỬ ĐẶT PHÒNG");
+        jLabel22.setText("RENTAL HISTORY");
         LSDP_Panel.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 70));
 
         jButton1.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
@@ -884,7 +884,7 @@ public class MainFrame extends javax.swing.JFrame {
         LSDP_Table.getTableHeader().setReorderingAllowed(false);
         jScrollPane4.setViewportView(LSDP_Table);
 
-        LSDP_Panel.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 870, 740));
+        LSDP_Panel.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 880, 760));
 
         TabPanel.addTab("tab6", LSDP_Panel);
 

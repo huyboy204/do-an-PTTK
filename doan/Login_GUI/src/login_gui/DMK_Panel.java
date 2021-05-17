@@ -37,23 +37,23 @@ public class DMK_Panel extends javax.swing.JFrame {
         MatKhauMoiReW_TextField = new javax.swing.JPasswordField();
         btnMDK = new javax.swing.JButton();
 
-        setTitle("Đổi mật khẩu");
+        setTitle("CHANGE PASSWORD");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         DMK_Panel.setBackground(new java.awt.Color(250, 249, 248));
         DMK_Panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("UTM Avo", 1, 12)); // NOI18N
-        jLabel1.setText("Nhập lại mật khẩu mới:");
-        DMK_Panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 160, 40));
+        jLabel1.setText("RE-ENTER THE PASSWORD:");
+        DMK_Panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 170, 40));
 
         jLabel2.setFont(new java.awt.Font("UTM Avo", 1, 12)); // NOI18N
-        jLabel2.setText("Nhập mật khẩu cũ:");
-        DMK_Panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 140, 40));
+        jLabel2.setText("ENTER THE OLD PASSWORD:");
+        DMK_Panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, 40));
 
         jLabel3.setFont(new java.awt.Font("UTM Avo", 1, 12)); // NOI18N
-        jLabel3.setText("Nhập mật khẩu mới:");
-        DMK_Panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 140, 40));
+        jLabel3.setText("ENTER THE NEW PASSWORD:");
+        DMK_Panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 170, 40));
 
         MatKhauCu_TextField.setText("jPasswordField1");
         MatKhauCu_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
@@ -65,7 +65,12 @@ public class DMK_Panel extends javax.swing.JFrame {
                 MatKhauCu_TextFieldFocusLost(evt);
             }
         });
-        DMK_Panel.add(MatKhauCu_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 320, 40));
+        MatKhauCu_TextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MatKhauCu_TextFieldActionPerformed(evt);
+            }
+        });
+        DMK_Panel.add(MatKhauCu_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 320, 40));
 
         MatKhauMoi_TextField.setText("jPasswordField1");
         MatKhauMoi_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
@@ -77,7 +82,7 @@ public class DMK_Panel extends javax.swing.JFrame {
                 MatKhauMoi_TextFieldFocusLost(evt);
             }
         });
-        DMK_Panel.add(MatKhauMoi_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 320, 40));
+        DMK_Panel.add(MatKhauMoi_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 320, 40));
 
         MatKhauMoiReW_TextField.setText("jPasswordField1");
         MatKhauMoiReW_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
@@ -89,17 +94,17 @@ public class DMK_Panel extends javax.swing.JFrame {
                 MatKhauMoiReW_TextFieldFocusLost(evt);
             }
         });
-        DMK_Panel.add(MatKhauMoiReW_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 320, 40));
+        DMK_Panel.add(MatKhauMoiReW_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 320, 40));
 
         btnMDK.setFont(new java.awt.Font("UTM Avo", 1, 14)); // NOI18N
-        btnMDK.setText("Đổi mật khẩu");
+        btnMDK.setText("CHANGE PASSWORD");
         btnMDK.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnMDK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMDKActionPerformed(evt);
             }
         });
-        DMK_Panel.add(btnMDK, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 160, 50));
+        DMK_Panel.add(btnMDK, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 200, 50));
 
         getContentPane().add(DMK_Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 300));
 
@@ -139,6 +144,10 @@ public class DMK_Panel extends javax.swing.JFrame {
     private void btnMDKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMDKActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMDKActionPerformed
+
+    private void MatKhauCu_TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MatKhauCu_TextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MatKhauCu_TextFieldActionPerformed
 
     /**
      * @param args the command line arguments
