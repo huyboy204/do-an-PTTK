@@ -335,7 +335,7 @@ public class MainFrame extends javax.swing.JFrame {
         QLP_Panel.add(StatusComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 390, 40));
 
         TypeRoomComboBox.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
-        TypeRoomComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Economy", "Deluxe", "Royal", "President" }));
+        TypeRoomComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VIP", "Standard", "Double", "Single", "Twin", "Triple" }));
         TypeRoomComboBox.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         QLP_Panel.add(TypeRoomComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 390, 40));
 
@@ -741,7 +741,7 @@ public class MainFrame extends javax.swing.JFrame {
         NV_Panel.add(btnDelete_NV, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, 120, 50));
 
         DePart_NV_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
-        DePart_NV_TextField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cleaner", "Security", "Room Attendent", "Reception" }));
+        DePart_NV_TextField.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cleaner", "Security Guard", "Room Attendent", "Receptionist", "Manager" }));
         DePart_NV_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         NV_Panel.add(DePart_NV_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 390, 40));
 
