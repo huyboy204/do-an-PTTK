@@ -5,6 +5,12 @@
  */
 package login_gui;
 
+import DAL.Employee_DAL;
+import DTO.Employee_DTO;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
 /**
@@ -1206,7 +1212,6 @@ public class MainFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -1214,6 +1219,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
     }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Adr_NV_TextField;

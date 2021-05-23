@@ -6,8 +6,11 @@
 
 package login_gui;
 
+import DAL.ConnectionDB_DAL;
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
 /**
  *
  * @author Huy
@@ -169,13 +172,16 @@ public class Login_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_PasswordFieldFocusLost
 
     private void SignInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignInButtonMouseClicked
+        if (conection.OpenConnection()){
         java.awt.EventQueue.invokeLater(new Runnable() {
+            
             public void run() {
                 new MainFrame().setVisible(true);
                 
             }
         });
         this.setVisible(false);
+        }
     }//GEN-LAST:event_SignInButtonMouseClicked
 
     /**
@@ -187,6 +193,7 @@ public class Login_GUI extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+      
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -209,10 +216,11 @@ public class Login_GUI extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Login_GUI().setVisible(true);
+              
             }
         });
     }
-
+    public static ConnectionDB_DAL conection = new ConnectionDB_DAL();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel IDLabel;
     private javax.swing.JTextField IDTextField;
