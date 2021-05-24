@@ -25,7 +25,7 @@ public class Employee_DAL {
     List<Employee_DTO> list_em = new ArrayList<>(); 
     public Employee_DAL(){
     };
-    public void Insert(Employee_DTO em){
+    public boolean Insert(Employee_DTO em){
         try {
             Object arg[]= {em.getStaffId(),em.getFullName(),em.getGender(),em.getAddress(),em.getPhoneNumber(),em.getDateOfBird(),em.getDepartment()};
 
@@ -42,7 +42,9 @@ public class Employee_DAL {
             }
         }catch (SQLException ex){
             JOptionPane.showMessageDialog(null,ex.toString(),"Error", JOptionPane.ERROR_MESSAGE);
+            return false;
         }
+        return true;
     }
     public boolean Delete(Employee_DTO em){
         try {
@@ -77,11 +79,11 @@ public class Employee_DAL {
         return true;
 
     }
-    public void LoadData(){
+    public List SelectData(String selectSql){
 
         try {
      
-            String sql = "select * from Staff";
+            String sql = selectSql;
             ResultSet rs = login_gui.Login_GUI.conection.conn.createStatement().executeQuery(sql);
             while (rs.next()){
                 Employee_DTO em = new Employee_DTO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7));
@@ -90,14 +92,15 @@ public class Employee_DAL {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,ex.toString(),"Error", JOptionPane.ERROR_MESSAGE);
         }
-    }
-    public List GetData(){
-        try{
-            LoadData();
-        }catch (Exception ex){
-            JOptionPane.showMessageDialog(null,ex.toString(),"Error at GetData() function", JOptionPane.ERROR_MESSAGE);
-        }
-
         return this.list_em;
     }
+//    public List SelectData(String selectSql){
+//        try{
+//            LoadData(selectSql);
+//        }catch (Exception ex){
+//            JOptionPane.showMessageDialog(null,ex.toString(),"Error at GetData() function", JOptionPane.ERROR_MESSAGE);
+//        }
+//
+//        return this.list_em;
+//    }
 }

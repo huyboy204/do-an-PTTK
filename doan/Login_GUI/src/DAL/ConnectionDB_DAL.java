@@ -20,9 +20,9 @@ import java.sql.Statement;
  */
 public class ConnectionDB_DAL {
     public ConnectionDB_DAL(){};
-    private static String DB_URL = "jdbc:sqlserver://DESKTOP-5INI1CA\\LEO297;"
-            + "databaseName=testdb;"
-            + "integratedSecurity=true";
+//    private static String DB_URL = "jdbc:sqlserver://DESKTOP-5INI1CA\\LEO297;"
+//            + "databaseName=testdb;"
+//            + "integratedSecurity=true";
 //    private static String USER_NAME = "sa";
 //    private static String PASSWORD = "1234567890";
     public Connection conn = null;

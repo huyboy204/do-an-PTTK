@@ -5,6 +5,7 @@
  */
 package login_gui;
 
+import BUS.Employee_BUS;
 import DAL.Employee_DAL;
 import DTO.Employee_DTO;
 import java.util.ArrayList;
@@ -1219,7 +1220,41 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
     }
-   
+//    Employee_BUS em_BUS = new Employee_BUS();
+//    public void setUpTypeOfTable(){
+//        DefaultTableModel model= (DefaultTableModel)NV_Table.getModel();
+//        model.addColumn("ID");
+//        model.addColumn("Full Name");
+//        model.addColumn("Gender");
+//        model.addColumn("DateOfBird");
+//        model.addColumn("Phone Number");
+//        model.addColumn("Address");
+//        model.addColumn("Department");
+//        
+//        
+//
+//    }
+//    public void GetDataFromDTBToStaffTable(){
+//        List<Employee_DTO> list_em = new ArrayList<>();
+//        DefaultTableModel model= (DefaultTableModel)NV_Table.getModel();
+//        list_em = em_BUS.SelectData("select * from Staff");
+//        Object[] row= new Object[7];
+//        list_em.forEach((Employee_DTO em) -> {
+//            row= new Object[7];
+//            row[0]=em.getStaffId();
+//            row[1]=em.getFullName();
+//            row[2]=em.getGender();
+//            row[3]=em.getDateOfBird();
+//            row[4]=em.getPhoneNumber();
+//            row[5]=em.getAddress();
+//            row[6]=em.getDepartment();
+//            model.addRow(row);  
+//
+//
+//        });
+//        ;
+//    }
+//    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Adr_NV_TextField;
