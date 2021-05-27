@@ -135,7 +135,7 @@
         <Component class="javax.swing.JLabel" name="btnBook">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/login_gui/pic/QLP_pic/btnBook1.png"/>
+              <Image iconType="3" name="/GUI/pic/QLP_pic/btnBook1.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -170,7 +170,7 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/login_gui/pic/QLKH_pic/Phone_Bgr.png"/>
+              <Image iconType="3" name="/GUI/pic/QLKH_pic/Phone_Bgr.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -182,7 +182,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/login_gui/pic/QLP_pic/CusID_Bgr.png"/>
+              <Image iconType="3" name="/GUI/pic/QLP_pic/CusID_Bgr.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -194,7 +194,7 @@
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/login_gui/pic/QLKH_pic/Name_Bgr.png"/>
+              <Image iconType="3" name="/GUI/pic/QLKH_pic/Name_Bgr.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -206,7 +206,7 @@
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/login_gui/pic/QLKH_pic/CCCD_Bgr.png"/>
+              <Image iconType="3" name="/GUI/pic/QLKH_pic/CCCD_Bgr.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -218,7 +218,7 @@
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/login_gui/pic/QLKH_pic/DateOfBirth_Bgr.png"/>
+              <Image iconType="3" name="/GUI/pic/QLKH_pic/DateOfBirth_Bgr.png"/>
             </Property>
           </Properties>
           <Constraints>

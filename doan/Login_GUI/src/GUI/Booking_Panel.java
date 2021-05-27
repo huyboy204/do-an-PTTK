@@ -74,7 +74,7 @@ public class Booking_Panel extends javax.swing.JFrame {
         Phone_KH_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jPanel1.add(Phone_KH_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 400, 40));
 
-        btnBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/btnBook1.png"))); // NOI18N
+        btnBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/QLP_pic/btnBook1.png"))); // NOI18N
         btnBook.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnBook.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -93,19 +93,19 @@ public class Booking_Panel extends javax.swing.JFrame {
         jLabel1.setText("BOOKING INFO");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 190, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/Phone_Bgr.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/QLKH_pic/Phone_Bgr.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 540, 50));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLP_pic/CusID_Bgr.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/QLP_pic/CusID_Bgr.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 540, 50));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/Name_Bgr.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/QLKH_pic/Name_Bgr.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 540, 50));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/CCCD_Bgr.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/QLKH_pic/CCCD_Bgr.png"))); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 540, 50));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login_gui/pic/QLKH_pic/DateOfBirth_Bgr.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/QLKH_pic/DateOfBirth_Bgr.png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 540, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 430));
