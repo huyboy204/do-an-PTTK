@@ -5,7 +5,7 @@
  */
 package DAL;
 
-import DTO.Employee_DTO;
+import DTO.Customer_DTO;
 
 import java.sql.Connection;
 import java.sql.*;
@@ -16,24 +16,23 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
-    
+
 /**
  *
  * @author TienVinh
  */
-public class Employee_DAL {
-    public Employee_DAL(){
-    };
-    public boolean Insert(Employee_DTO em){
+public class Customer_DAL {
+    public Customer_DAL(){};
+    public boolean Insert(Customer_DTO cus){
         try {
-            Object arg[]= {em.getStaffId(),em.getFullName(),em.getGender(),em.getAddress(),em.getPhoneNumber(),em.getDateOfBird(),em.getDepartment()};
+            Object arg[]= {cus.getCustomer_id(),cus.getFullname(),cus.getCccd(),cus.getPhoneNumber(),cus.getDateOfBird()};
 
-            String em_SQL;
-            em_SQL = String.format("INSERT INTO Staff VALUES ('%s','%s','%s','%s','%s','%s','%s')",arg);
+            String cus_SQL;
+            cus_SQL = String.format("INSERT INTO Client VALUES ('%s','%s','%s','%s','%s','%s')",arg);
 
             Statement statement = login_gui.Login_GUI.conection.conn.createStatement();
 
-            int rows_employee = statement.executeUpdate(em_SQL);
+            int rows_employee = statement.executeUpdate(cus_SQL);
             if (rows_employee > 0){
                 System.out.println("Insert successfull");
             }else {
@@ -43,13 +42,14 @@ public class Employee_DAL {
             JOptionPane.showMessageDialog(null,ex.toString(),"Error", JOptionPane.ERROR_MESSAGE);
             return false;
         }
-        return true;
+        return false;
+        
     }
-    public boolean Delete(Employee_DTO em){
+     public boolean Delete(Customer_DTO cus){
         try {
-            Object arg[]= {em.getStaffId()};
+            Object arg[]= {cus.getCustomer_id()};
             String sql;
-            sql = String.format("DELETE FROM Staff WHERE ID  = '%s'", arg);
+            sql = String.format("DELETE FROM Client WHERE ID  = '%s'", arg);
             Statement statement = login_gui.Login_GUI.conection.conn.createStatement();
             int rows = statement.executeUpdate(sql);
             if (rows > 0 ){
@@ -61,11 +61,11 @@ public class Employee_DAL {
         }
         return true;
     }
-    public boolean Update(Employee_DTO em) {
+    public boolean Update(Customer_DTO cus) {
         try {
-            Object arg[]= {em.getFullName(),em.getGender(),em.getAddress(),em.getPhoneNumber(),em.getDateOfBird(),em.getDepartment(),em.getStaffId()};
+            Object arg[]= {cus.getFullname(),cus.getCccd(),cus.getPhoneNumber(),cus.getDateOfBird(),cus.getCustomer_id()};
             String sql;
-            sql = String.format("UPDATE Staff SET FullName='%s', Gender='%s', cAddress='%s', phoneNumber='%s', DateOfBird='%s', Department='%s' WHERE ID  = '%s'", arg);
+            sql = String.format("UPDATE Staff SET FullName='%s', cccd='%s', phoneNumber='%s', DateOfBird='%s' WHERE CID  = '%s'", arg);
             Statement statement = login_gui.Login_GUI.conection.conn.createStatement();
             int rows = statement.executeUpdate(sql);
             if (rows > 0){
@@ -79,28 +79,19 @@ public class Employee_DAL {
 
     }
     public List SelectData(String selectSql){
-        List<Employee_DTO> list_em = new ArrayList<>(); 
+        List<Customer_DTO> list_cus = new ArrayList<>(); 
 
         try {
      
             String sql = selectSql;
             ResultSet rs = login_gui.Login_GUI.conection.conn.createStatement().executeQuery(sql);
             while (rs.next()){
-                Employee_DTO em = new Employee_DTO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7));
-                list_em.add(em);
+                Customer_DTO em = new Customer_DTO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
+                list_cus.add(em);
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,ex.toString(),"Error", JOptionPane.ERROR_MESSAGE);
         }
-        return list_em;
+        return list_cus;
     }
-//    public List SelectData(String selectSql){
-//        try{
-//            LoadData(selectSql);
-//        }catch (Exception ex){
-//            JOptionPane.showMessageDialog(null,ex.toString(),"Error at GetData() function", JOptionPane.ERROR_MESSAGE);
-//        }
-//
-//        return this.list_em;
-//    }
 }
