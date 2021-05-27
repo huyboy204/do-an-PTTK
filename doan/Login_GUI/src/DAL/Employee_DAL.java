@@ -48,17 +48,12 @@ public class Employee_DAL {
     public boolean Delete(Employee_DTO em){
         try {
             Object arg[]= {em.getStaffId()};
-<<<<<<< HEAD
             String sql;
-            sql = String.format("DELETE FROM Staff WHERE ID  = '%s'", arg);
-            Statement statement = login_gui.Login_GUI.conection.conn.createStatement();
-            int rows = statement.executeUpdate(sql);
-=======
+      
             String studentFee_SQL;
             studentFee_SQL = String.format("DELETE FROM Staff WHERE ID  = '%s'", arg);
             Statement statement = GUI.Login_GUI.conection.conn.createStatement();
             int rows = statement.executeUpdate(studentFee_SQL);
->>>>>>> b715974362e280538547311af47ea70338604fbe
             if (rows > 0 ){
                 System.out.println("Delete successfull");
             }

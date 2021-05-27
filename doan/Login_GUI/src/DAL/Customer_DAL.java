@@ -30,7 +30,7 @@ public class Customer_DAL {
             String cus_SQL;
             cus_SQL = String.format("INSERT INTO Client VALUES ('%s','%s','%s','%s','%s','%s')",arg);
 
-            Statement statement = login_gui.Login_GUI.conection.conn.createStatement();
+            Statement statement = GUI.Login_GUI.conection.conn.createStatement();
 
             int rows_employee = statement.executeUpdate(cus_SQL);
             if (rows_employee > 0){
@@ -50,7 +50,7 @@ public class Customer_DAL {
             Object arg[]= {cus.getCustomer_id()};
             String sql;
             sql = String.format("DELETE FROM Client WHERE ID  = '%s'", arg);
-            Statement statement = login_gui.Login_GUI.conection.conn.createStatement();
+            Statement statement = GUI.Login_GUI.conection.conn.createStatement();
             int rows = statement.executeUpdate(sql);
             if (rows > 0 ){
                 System.out.println("Delete successfull");
@@ -66,7 +66,7 @@ public class Customer_DAL {
             Object arg[]= {cus.getFullname(),cus.getCccd(),cus.getPhoneNumber(),cus.getDateOfBird(),cus.getCustomer_id()};
             String sql;
             sql = String.format("UPDATE Staff SET FullName='%s', cccd='%s', phoneNumber='%s', DateOfBird='%s' WHERE CID  = '%s'", arg);
-            Statement statement = login_gui.Login_GUI.conection.conn.createStatement();
+            Statement statement = GUI.Login_GUI.conection.conn.createStatement();
             int rows = statement.executeUpdate(sql);
             if (rows > 0){
                 System.out.println("Update successfull");
@@ -84,7 +84,7 @@ public class Customer_DAL {
         try {
      
             String sql = selectSql;
-            ResultSet rs = login_gui.Login_GUI.conection.conn.createStatement().executeQuery(sql);
+            ResultSet rs = GUI.Login_GUI.conection.conn.createStatement().executeQuery(sql);
             while (rs.next()){
                 Customer_DTO em = new Customer_DTO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
                 list_cus.add(em);
