@@ -31,7 +31,7 @@ public class Employee_DAL {
             String em_SQL;
             em_SQL = String.format("INSERT INTO Staff VALUES ('%s','%s','%s','%s','%s','%s','%s')",arg);
 
-            Statement statement = login_gui.Login_GUI.conection.conn.createStatement();
+            Statement statement = GUI.Login_GUI.conection.conn.createStatement();
 
             int rows_employee = statement.executeUpdate(em_SQL);
             if (rows_employee > 0){
@@ -48,10 +48,17 @@ public class Employee_DAL {
     public boolean Delete(Employee_DTO em){
         try {
             Object arg[]= {em.getStaffId()};
+<<<<<<< HEAD
             String sql;
             sql = String.format("DELETE FROM Staff WHERE ID  = '%s'", arg);
             Statement statement = login_gui.Login_GUI.conection.conn.createStatement();
             int rows = statement.executeUpdate(sql);
+=======
+            String studentFee_SQL;
+            studentFee_SQL = String.format("DELETE FROM Staff WHERE ID  = '%s'", arg);
+            Statement statement = GUI.Login_GUI.conection.conn.createStatement();
+            int rows = statement.executeUpdate(studentFee_SQL);
+>>>>>>> b715974362e280538547311af47ea70338604fbe
             if (rows > 0 ){
                 System.out.println("Delete successfull");
             }
@@ -66,7 +73,7 @@ public class Employee_DAL {
             Object arg[]= {em.getFullName(),em.getGender(),em.getAddress(),em.getPhoneNumber(),em.getDateOfBird(),em.getDepartment(),em.getStaffId()};
             String sql;
             sql = String.format("UPDATE Staff SET FullName='%s', Gender='%s', cAddress='%s', phoneNumber='%s', DateOfBird='%s', Department='%s' WHERE ID  = '%s'", arg);
-            Statement statement = login_gui.Login_GUI.conection.conn.createStatement();
+            Statement statement = GUI.Login_GUI.conection.conn.createStatement();
             int rows = statement.executeUpdate(sql);
             if (rows > 0){
                 System.out.println("Update successfull");
@@ -84,7 +91,7 @@ public class Employee_DAL {
         try {
      
             String sql = selectSql;
-            ResultSet rs = login_gui.Login_GUI.conection.conn.createStatement().executeQuery(sql);
+            ResultSet rs = GUI.Login_GUI.conection.conn.createStatement().executeQuery(sql);
             while (rs.next()){
                 Employee_DTO em = new Employee_DTO(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7));
                 list_em.add(em);
