@@ -14,15 +14,18 @@ public class Room_DTO {
     String roomId;
     String typeOfRoom;
     String status;
-    String bookId;
-    String customerId;
-     public Room_DTO(String roomId, String typeOfRoom, String status, String bookId, String customerId) {
+    String employeeId;
+    
+    
+    public Room_DTO(String roomId, String typeOfRoom, String status, String employeeId) {
         this.roomId = roomId;
         this.typeOfRoom = typeOfRoom;
         this.status = status;
-        this.bookId = bookId;
-        this.customerId = customerId;
+        this.employeeId = employeeId;
+       
     }
+
+  
 
     public String getRoomId() {
         return roomId;
@@ -48,19 +51,13 @@ public class Room_DTO {
         this.status = status;
     }
 
-    public String getBookId() {
-        return bookId;
+    public String getEmployeeId() {
+        return employeeId;
     }
 
-    public void setBookId(String bookId) {
-        this.bookId = bookId;
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public String getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
-    }
+   
 }

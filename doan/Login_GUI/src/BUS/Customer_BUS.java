@@ -7,6 +7,7 @@ package BUS;
 
 import DAL.Customer_DAL;
 import DTO.Customer_DTO;
+import java.util.List;
 
 /**
  *
@@ -17,16 +18,16 @@ public class Customer_BUS {
     public Customer_BUS() {
     };
     Customer_DAL cus_DAL = new Customer_DAL();
-    public void Insert(Customer_DTO cus){
-        cus_DAL.Insert(cus);
+    public boolean Insert(Customer_DTO cus){
+       return cus_DAL.Insert(cus);
     }
-    public void Delete(Customer_DTO cus){
-        cus_DAL.Delete(cus);
+    public boolean Delete(Customer_DTO cus){
+       return cus_DAL.Delete(cus);
     }
-    public void Update(Customer_DTO cus){
-        cus_DAL.Update(cus);
+    public boolean Update(Customer_DTO cus){
+       return cus_DAL.Update(cus);
     }
-    public void Select(String sqlString){
-        cus_DAL.SelectData(sqlString);
+    public List Select(String sqlString){
+       return cus_DAL.SelectData(sqlString);
     }
 }
