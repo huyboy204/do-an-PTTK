@@ -55,7 +55,7 @@ public class DMK_Panel extends javax.swing.JFrame {
         jLabel3.setText("ENTER THE NEW PASSWORD:");
         DMK_Panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 170, 40));
 
-        MatKhauCu_TextField.setText("jPasswordField1");
+        MatKhauCu_TextField.setText(".............");
         MatKhauCu_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         MatKhauCu_TextField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -72,7 +72,7 @@ public class DMK_Panel extends javax.swing.JFrame {
         });
         DMK_Panel.add(MatKhauCu_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 320, 40));
 
-        MatKhauMoi_TextField.setText("jPasswordField1");
+        MatKhauMoi_TextField.setText(".............");
         MatKhauMoi_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         MatKhauMoi_TextField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -84,7 +84,7 @@ public class DMK_Panel extends javax.swing.JFrame {
         });
         DMK_Panel.add(MatKhauMoi_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 320, 40));
 
-        MatKhauMoiReW_TextField.setText("jPasswordField1");
+        MatKhauMoiReW_TextField.setText(".............");
         MatKhauMoiReW_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         MatKhauMoiReW_TextField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -112,7 +112,9 @@ public class DMK_Panel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MatKhauCu_TextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MatKhauCu_TextFieldFocusGained
-        MatKhauCu_TextField.setText("");
+        if(MatKhauCu_TextField.getText().equals(".............")){
+            MatKhauCu_TextField.setText("");
+        }
     }//GEN-LAST:event_MatKhauCu_TextFieldFocusGained
 
     private void MatKhauCu_TextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MatKhauCu_TextFieldFocusLost
@@ -122,7 +124,9 @@ public class DMK_Panel extends javax.swing.JFrame {
     }//GEN-LAST:event_MatKhauCu_TextFieldFocusLost
 
     private void MatKhauMoi_TextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MatKhauMoi_TextFieldFocusGained
-        MatKhauMoi_TextField.setText("");
+        if(MatKhauMoi_TextField.getText().equals(".............")){
+            MatKhauMoi_TextField.setText("");
+        }
     }//GEN-LAST:event_MatKhauMoi_TextFieldFocusGained
 
     private void MatKhauMoi_TextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MatKhauMoi_TextFieldFocusLost
@@ -132,7 +136,9 @@ public class DMK_Panel extends javax.swing.JFrame {
     }//GEN-LAST:event_MatKhauMoi_TextFieldFocusLost
 
     private void MatKhauMoiReW_TextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MatKhauMoiReW_TextFieldFocusGained
-        MatKhauMoiReW_TextField.setText("");
+        if(MatKhauMoiReW_TextField.getText().equals(".............")){
+            MatKhauMoiReW_TextField.setText("");
+        }
     }//GEN-LAST:event_MatKhauMoiReW_TextFieldFocusGained
 
     private void MatKhauMoiReW_TextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_MatKhauMoiReW_TextFieldFocusLost

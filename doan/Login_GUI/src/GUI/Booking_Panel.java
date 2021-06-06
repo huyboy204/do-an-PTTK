@@ -39,8 +39,8 @@ public class Booking_Panel extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        DOBirth_KH_Textfield = new javax.swing.JTextField();
         RoomID_TextField = new javax.swing.JTextField();
+        DOBirth_KH_TextField = new javax.swing.JTextField();
         Name_KH_TextField = new javax.swing.JTextField();
         CCCD_KH_TextField = new javax.swing.JTextField();
         Phone_KH_TextField = new javax.swing.JTextField();
@@ -59,34 +59,69 @@ public class Booking_Panel extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(250, 249, 248));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        DOBirth_KH_Textfield.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
-        DOBirth_KH_Textfield.setText("Date Of Birth");
-        DOBirth_KH_Textfield.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jPanel1.add(DOBirth_KH_Textfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 400, 40));
-
         RoomID_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         RoomID_TextField.setText("Room ID");
         RoomID_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        RoomID_TextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RoomID_TextFieldActionPerformed(evt);
+        RoomID_TextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                RoomID_TextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                RoomID_TextFieldFocusLost(evt);
             }
         });
         jPanel1.add(RoomID_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 400, 40));
 
+        DOBirth_KH_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
+        DOBirth_KH_TextField.setText("Date Of Birth");
+        DOBirth_KH_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        DOBirth_KH_TextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                DOBirth_KH_TextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                DOBirth_KH_TextFieldFocusLost(evt);
+            }
+        });
+        jPanel1.add(DOBirth_KH_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 400, 40));
+
         Name_KH_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         Name_KH_TextField.setText("Full Name");
         Name_KH_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        Name_KH_TextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                Name_KH_TextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                Name_KH_TextFieldFocusLost(evt);
+            }
+        });
         jPanel1.add(Name_KH_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 400, 40));
 
         CCCD_KH_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         CCCD_KH_TextField.setText("CCCD");
         CCCD_KH_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        CCCD_KH_TextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                CCCD_KH_TextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                CCCD_KH_TextFieldFocusLost(evt);
+            }
+        });
         jPanel1.add(CCCD_KH_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 400, 40));
 
         Phone_KH_TextField.setFont(new java.awt.Font("UTM Avo", 0, 12)); // NOI18N
         Phone_KH_TextField.setText("Phone Number");
         Phone_KH_TextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        Phone_KH_TextField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                Phone_KH_TextFieldFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                Phone_KH_TextFieldFocusLost(evt);
+            }
+        });
         jPanel1.add(Phone_KH_TextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 400, 40));
 
         btnBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/QLP_pic/btnBook1.png"))); // NOI18N
@@ -140,9 +175,65 @@ public class Booking_Panel extends javax.swing.JFrame {
         btnBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/QLP_pic/btnBook1.png")));
     }//GEN-LAST:event_btnBookMouseExited
 
-    private void RoomID_TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoomID_TextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RoomID_TextFieldActionPerformed
+    private void RoomID_TextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RoomID_TextFieldFocusGained
+        if(RoomID_TextField.getText().equals("Room ID")){
+            RoomID_TextField.setText("");
+        }
+    }//GEN-LAST:event_RoomID_TextFieldFocusGained
+
+    private void RoomID_TextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_RoomID_TextFieldFocusLost
+        if(RoomID_TextField.getText().isEmpty()) {
+            RoomID_TextField.setText("Room ID");
+        }
+    }//GEN-LAST:event_RoomID_TextFieldFocusLost
+
+    private void Name_KH_TextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Name_KH_TextFieldFocusGained
+        if(Name_KH_TextField.getText().equals("Full Name")){
+            Name_KH_TextField.setText("");
+        }
+    }//GEN-LAST:event_Name_KH_TextFieldFocusGained
+
+    private void Name_KH_TextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Name_KH_TextFieldFocusLost
+        if(Name_KH_TextField.getText().isEmpty()) {
+            Name_KH_TextField.setText("Full Name");
+        }
+    }//GEN-LAST:event_Name_KH_TextFieldFocusLost
+
+    private void CCCD_KH_TextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CCCD_KH_TextFieldFocusGained
+        if(CCCD_KH_TextField.getText().equals("CCCD")){
+            CCCD_KH_TextField.setText("");
+        }
+    }//GEN-LAST:event_CCCD_KH_TextFieldFocusGained
+
+    private void CCCD_KH_TextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CCCD_KH_TextFieldFocusLost
+        if(CCCD_KH_TextField.getText().isEmpty()) {
+            CCCD_KH_TextField.setText("CCCD");
+        }
+    }//GEN-LAST:event_CCCD_KH_TextFieldFocusLost
+
+    private void DOBirth_KH_TextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DOBirth_KH_TextFieldFocusGained
+       if(DOBirth_KH_TextField.getText().equals("Date Of Birth")){
+            DOBirth_KH_TextField.setText("");
+        }
+    }//GEN-LAST:event_DOBirth_KH_TextFieldFocusGained
+
+    private void DOBirth_KH_TextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_DOBirth_KH_TextFieldFocusLost
+       if(DOBirth_KH_TextField.getText().isEmpty()) {
+            DOBirth_KH_TextField.setText("Date Of Birth");
+        }
+    }//GEN-LAST:event_DOBirth_KH_TextFieldFocusLost
+
+    private void Phone_KH_TextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Phone_KH_TextFieldFocusGained
+        if(Phone_KH_TextField.getText().equals("Phone Number")){
+            Phone_KH_TextField.setText("");
+        }
+    }//GEN-LAST:event_Phone_KH_TextFieldFocusGained
+
+    private void Phone_KH_TextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_Phone_KH_TextFieldFocusLost
+        if(Phone_KH_TextField.getText().isEmpty()) {
+            Phone_KH_TextField.setText("Phone Number");
+        }
+    }//GEN-LAST:event_Phone_KH_TextFieldFocusLost
 
     /**
      * @param args the command line arguments
@@ -181,7 +272,7 @@ public class Booking_Panel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CCCD_KH_TextField;
-    private javax.swing.JTextField DOBirth_KH_Textfield;
+    private javax.swing.JTextField DOBirth_KH_TextField;
     private javax.swing.JTextField Name_KH_TextField;
     private javax.swing.JTextField Phone_KH_TextField;
     private javax.swing.JTextField RoomID_TextField;

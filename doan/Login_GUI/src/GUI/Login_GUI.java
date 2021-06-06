@@ -52,6 +52,7 @@ public class Login_GUI extends javax.swing.JFrame {
         setTitle("Login");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMinimumSize(new java.awt.Dimension(740, 530));
+        setPreferredSize(new java.awt.Dimension(730, 539));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -71,18 +72,18 @@ public class Login_GUI extends javax.swing.JFrame {
                 SignInButtonMouseExited(evt);
             }
         });
-        mainPanel.add(SignInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, 70));
+        mainPanel.add(SignInButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, -1, 70));
 
         SignInLabel.setFont(new java.awt.Font("UTM Avo", 1, 24)); // NOI18N
         SignInLabel.setForeground(new java.awt.Color(148, 181, 247));
         SignInLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         SignInLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/Sign-in.png"))); // NOI18N
         SignInLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        mainPanel.add(SignInLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, -30, 420, 570));
+        mainPanel.add(SignInLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 380, 490));
         mainPanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 310, 20));
 
         PasswordField.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        PasswordField.setText("............");
+        PasswordField.setText(".............");
         PasswordField.setBorder(null);
         PasswordField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         PasswordField.setOpaque(false);
@@ -125,13 +126,13 @@ public class Login_GUI extends javax.swing.JFrame {
 
         RightLable.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RightLable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/sideRight.png"))); // NOI18N
-        mainPanel.add(RightLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 410, 510));
+        mainPanel.add(RightLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 400, 500));
 
         SideLable.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         SideLable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/sideLeft.png"))); // NOI18N
-        mainPanel.add(SideLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, -60, 480, 660));
+        mainPanel.add(SideLable, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, -1, 500));
 
-        getContentPane().add(mainPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -19, 740, 510));
+        getContentPane().add(mainPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -143,12 +144,16 @@ public class Login_GUI extends javax.swing.JFrame {
 
     private void IDTextFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_IDTextFieldFocusGained
         // TODO add your handling code here:
-        IDTextField.setText("");
+        if(IDTextField.getText().equals("Enter your ID")){
+            IDTextField.setText("");
+        }
     }//GEN-LAST:event_IDTextFieldFocusGained
 
     private void PasswordFieldFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PasswordFieldFocusGained
         // TODO add your handling code here:
-        PasswordField.setText("");
+        if(PasswordField.getText().equals(".............")){
+            PasswordField.setText("");
+        }
     }//GEN-LAST:event_PasswordFieldFocusGained
 
     private void SignInButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignInButtonMouseExited
