@@ -30,12 +30,11 @@ public class ConnectionDB_DAL {
     public boolean OpenConnection(){
         try {
             //Class.forName(com.microsoft.sqlserver.jdbc.SQLServerDriver);
-            String dbURL = "jdbc:sqlserver://localhost\\LAPTOP-KNKAD2S0:1433;databaseName=Hotel";
+            String dbURL = "jdbc:sqlserver://DESKTOP-C2HS95C\\LEO297;databaseName=Hotel";
             String user = "sa";
             String pass = "sa";
             conn = DriverManager.getConnection(dbURL, user, pass);
-         
-            
+       
             System.out.println("Connect succesfull");
             return true;
  
@@ -48,6 +47,8 @@ public class ConnectionDB_DAL {
     public boolean CloseConnection(){
         try{
             conn.close();
+                       System.out.println("disconnect succesfull");
+
             return true;
         } catch (SQLException ex){
             ex.printStackTrace();

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package GUI;
 
 import BUS.Booking_BUS;
@@ -11,6 +7,8 @@ import BUS.Employee_BUS;
 import DTO.Booking_DTO;
 import DTO.Customer_DTO;
 import DTO.Employee_DTO;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -25,8 +23,11 @@ public class Booking_Panel extends javax.swing.JFrame {
     Employee_BUS em_bus = new Employee_BUS();
     Customer_BUS cus_bus = new Customer_BUS();
     public Booking_Panel() {
+        
         initComponents();
+        
         setLocationRelativeTo(null);
+        RoomID_TextField.setText(MainFrame.ID_TextField.getText());
     }
 
     /**
@@ -129,7 +130,17 @@ public class Booking_Panel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBookMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBookMouseClicked
+       cus_bus.Insert(new Customer_DTO("",Name_KH_TextField.getText(),CCCD_KH_TextField.getText(),Phone_KH_TextField.getText(),DOBirth_KH_Textfield.getText()));
        
+       List<Customer_DTO> list_cus = new ArrayList<>();
+       list_cus=cus_bus.Select("select * from Client where CCCD = '"+CCCD_KH_TextField.getText()+"'");
+       Object[] row = new Object[1];
+       System.out.println(list_cus.size());
+       list_cus.forEach((Customer_DTO cus) -> {
+            row[0]=cus.getCustomer_id();
+            System.out.println(row[0]);
+        });       
+     //  booking_bus.Insert(new Booking_DTO("",row[0].toString(),RoomID_TextField.getText(),"",""));
     }//GEN-LAST:event_btnBookMouseClicked
 
     private void btnBookMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBookMouseEntered
@@ -178,6 +189,7 @@ public class Booking_Panel extends javax.swing.JFrame {
             }
         });
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CCCD_KH_TextField;

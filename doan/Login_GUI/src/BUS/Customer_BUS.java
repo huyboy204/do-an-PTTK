@@ -7,6 +7,7 @@ package BUS;
 
 import DAL.Customer_DAL;
 import DTO.Customer_DTO;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -27,7 +28,7 @@ public class Customer_BUS {
     public boolean Update(Customer_DTO cus){
        return cus_DAL.Update(cus);
     }
-    public List Select(String sqlString){
+    public List Select(String sqlString) {
        return cus_DAL.SelectData(sqlString);
     }
 }

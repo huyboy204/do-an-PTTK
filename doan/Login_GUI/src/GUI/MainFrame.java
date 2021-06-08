@@ -6,8 +6,10 @@
 package GUI;
 
 import BUS.Employee_BUS;
+import BUS.Room_BUS;
 import DAL.Employee_DAL;
 import DTO.Employee_DTO;
+import DTO.Room_DTO;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JTable;
@@ -472,13 +474,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         Phong_Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "Room ID", "Type Of Room", "Status", "Booking ID", "Customer ID"
+                "Room ID", "Type Of Room", "Status", "Employee ID", "Customer ID"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -492,7 +491,6 @@ public class MainFrame extends javax.swing.JFrame {
         Phong_Table.setFocusable(false);
         Phong_Table.setOpaque(false);
         Phong_Table.setRowHeight(25);
-        Phong_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Phong_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         Phong_Table.getTableHeader().setResizingAllowed(false);
         Phong_Table.getTableHeader().setReorderingAllowed(false);
@@ -643,7 +641,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         KH_Table.setRowHeight(25);
-        KH_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         KH_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         KH_Table.getTableHeader().setResizingAllowed(false);
         KH_Table.getTableHeader().setReorderingAllowed(false);
@@ -813,7 +810,6 @@ public class MainFrame extends javax.swing.JFrame {
         NV_Table.setFocusable(false);
         NV_Table.setRowHeight(25);
         NV_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        NV_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         NV_Table.getTableHeader().setResizingAllowed(false);
         NV_Table.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(NV_Table);
@@ -858,7 +854,6 @@ public class MainFrame extends javax.swing.JFrame {
         LSDP_Table.setFocusable(false);
         LSDP_Table.setRowHeight(25);
         LSDP_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        LSDP_Table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         LSDP_Table.getTableHeader().setResizingAllowed(false);
         LSDP_Table.getTableHeader().setReorderingAllowed(false);
         jScrollPane4.setViewportView(LSDP_Table);
@@ -892,6 +887,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void btnQLNVMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQLNVMouseEntered
         btnQLNV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/pic/btnQNV2.png")));
+        
     }//GEN-LAST:event_btnQLNVMouseEntered
 
     private void btnQLNVMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQLNVMouseExited
@@ -919,6 +915,7 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void btnQLPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQLPMouseClicked
         TabPanel.setSelectedComponent(QLP_Panel);
+        GetDataFromDTBToRoomTable();
     }//GEN-LAST:event_btnQLPMouseClicked
 
     private void btnQLKHMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQLKHMouseClicked
@@ -927,6 +924,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void btnQLNVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnQLNVMouseClicked
         TabPanel.setSelectedComponent(NV_Panel);
+        GetDataFromDTBToStaffTable();
     }//GEN-LAST:event_btnQLNVMouseClicked
 
     private void btnLSDPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLSDPMouseClicked
@@ -1172,7 +1170,8 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
     }
-//    Employee_BUS em_BUS = new Employee_BUS();
+    Employee_BUS em_BUS = new Employee_BUS();
+    Room_BUS room_bus = new Room_BUS();
 //    public void setUpTypeOfTable(){
 //        DefaultTableModel model= (DefaultTableModel)NV_Table.getModel();
 //        model.addColumn("ID");
@@ -1186,27 +1185,46 @@ public class MainFrame extends javax.swing.JFrame {
 //        
 //
 //    }
-//    public void GetDataFromDTBToStaffTable(){
-//        List<Employee_DTO> list_em = new ArrayList<>();
-//        DefaultTableModel model= (DefaultTableModel)NV_Table.getModel();
-//        list_em = em_BUS.SelectData("select * from Staff");
-//        Object[] row= new Object[7];
-//        list_em.forEach((Employee_DTO em) -> {
-//            row= new Object[7];
-//            row[0]=em.getStaffId();
-//            row[1]=em.getFullName();
-//            row[2]=em.getGender();
-//            row[3]=em.getDateOfBird();
-//            row[4]=em.getPhoneNumber();
-//            row[5]=em.getAddress();
-//            row[6]=em.getDepartment();
-//            model.addRow(row);  
-//
-//
-//        });
-//        ;
-//    }
-//    
+     public void GetDataFromDTBToRoomTable(){
+        List<Room_DTO> list_room = new ArrayList<>();
+        DefaultTableModel model= (DefaultTableModel)Phong_Table.getModel();
+        
+        list_room = room_bus.SelectData("select * from Room");
+        Object[] row= new Object[7];
+        list_room.forEach((Room_DTO room) -> {
+            
+            row[0]=room.getRoomId();
+            row[1]=room.getTypeOfRoom();
+            row[2]=room.getStatus();
+            row[3]=room.getEmployeeId();
+          
+            model.addRow(row);  
+
+
+        });
+        ;
+    }
+    public void GetDataFromDTBToStaffTable(){
+        List<Employee_DTO> list_em = new ArrayList<>();
+        DefaultTableModel model= (DefaultTableModel)NV_Table.getModel();
+        list_em = em_BUS.SelectData("select * from Staff");
+        Object[] row= new Object[7];
+        list_em.forEach((Employee_DTO em) -> {
+            
+            row[0]=em.getStaffId();
+            row[1]=em.getFullName();
+            row[2]=em.getGender();
+            row[3]=em.getDateOfBird();
+            row[4]=em.getPhoneNumber();
+            row[5]=em.getAddress();
+            row[6]=em.getDepartment();
+            model.addRow(row);  
+
+
+        });
+        ;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Adr_NV_TextField;
@@ -1221,7 +1239,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField Gender_NV_TextField;
     private javax.swing.JLabel ID_Backgr;
     private javax.swing.JLabel ID_Text;
-    private javax.swing.JTextField ID_TextField;
+    public static javax.swing.JTextField ID_TextField;
     private javax.swing.JPanel Info_Panel;
     private javax.swing.JPanel KH_Panel;
     private javax.swing.JTable KH_Table;

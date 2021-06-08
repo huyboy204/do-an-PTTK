@@ -171,7 +171,7 @@ public class Login_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_PasswordFieldFocusLost
 
     private void SignInButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignInButtonMouseClicked
-//        if (conection.OpenConnection()){
+       if (conection.OpenConnection()){
         java.awt.EventQueue.invokeLater(new Runnable() {
             
             public void run() {
@@ -180,7 +180,7 @@ public class Login_GUI extends javax.swing.JFrame {
             }
         });
         this.setVisible(false);
-    //    }
+       }
     }//GEN-LAST:event_SignInButtonMouseClicked
 
     /**

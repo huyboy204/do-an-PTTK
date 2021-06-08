@@ -538,6 +538,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+                  </AuxValues>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="190" y="80" width="390" height="40"/>
@@ -821,18 +824,17 @@
                     <Component class="javax.swing.JTable" name="Phong_Table">
                       <Properties>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="5" rowCount="4">
+                          <Table columnCount="5" rowCount="0">
                             <Column editable="false" title="Room ID" type="java.lang.Object"/>
                             <Column editable="false" title="Type Of Room" type="java.lang.Object"/>
                             <Column editable="false" title="Status" type="java.lang.Object"/>
-                            <Column editable="false" title="Booking ID" type="java.lang.Object"/>
+                            <Column editable="false" title="Employee ID" type="java.lang.Object"/>
                             <Column editable="false" title="Customer ID" type="java.lang.Object"/>
                           </Table>
                         </Property>
                         <Property name="focusable" type="boolean" value="false"/>
                         <Property name="opaque" type="boolean" value="false"/>
                         <Property name="rowHeight" type="int" value="25"/>
-                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="selectionModel" type="javax.swing.ListSelectionModel" editor="org.netbeans.modules.form.editors2.JTableSelectionModelEditor">
                           <JTableSelectionModel selectionMode="0"/>
                         </Property>
@@ -1160,7 +1162,6 @@
                           </Table>
                         </Property>
                         <Property name="rowHeight" type="int" value="25"/>
-                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="selectionModel" type="javax.swing.ListSelectionModel" editor="org.netbeans.modules.form.editors2.JTableSelectionModelEditor">
                           <JTableSelectionModel selectionMode="0"/>
                         </Property>
@@ -1565,7 +1566,6 @@
                         </Property>
                         <Property name="focusable" type="boolean" value="false"/>
                         <Property name="rowHeight" type="int" value="25"/>
-                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="selectionModel" type="javax.swing.ListSelectionModel" editor="org.netbeans.modules.form.editors2.JTableSelectionModelEditor">
                           <JTableSelectionModel selectionMode="0"/>
                         </Property>
@@ -1658,7 +1658,6 @@
                         </Property>
                         <Property name="focusable" type="boolean" value="false"/>
                         <Property name="rowHeight" type="int" value="25"/>
-                        <Property name="selectionMode" type="int" value="0"/>
                         <Property name="selectionModel" type="javax.swing.ListSelectionModel" editor="org.netbeans.modules.form.editors2.JTableSelectionModelEditor">
                           <JTableSelectionModel selectionMode="0"/>
                         </Property>
